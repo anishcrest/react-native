@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "796471814300",
+    "project_id": "reduxapp-61fc9",
+    "storage_bucket": "reduxapp-61fc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796471814300:android:989fc212e1f78811452559",
+        "android_client_info": {
+          "package_name": "com.reduxapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796471814300-te4kfn9d2d5iaukarhkdfspghodsdie6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reduxapp",
+            "certificate_hash": "fa1aa324fc4ef44780b186475cb091d279d7b403"
+          }
+        },
+        {
+          "client_id": "796471814300-msrllcm77nmj930kshos8ujpoo4m3dps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9JZjdRr8ve4Kqu-2OnHsNI2cJoNCfPzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796471814300-msrllcm77nmj930kshos8ujpoo4m3dps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
