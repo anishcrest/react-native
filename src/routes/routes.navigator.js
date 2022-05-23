@@ -20,7 +20,7 @@ const Routes = () => {
         <AppStack.Screen name="Splash" component={Splash} />
         <AppStack.Screen name="Auth" component={AuthRoutes} />
         <AppStack.Screen name="Tabs" component={Tabs} />
-        {/* <AppStack.Screen
+        <AppStack.Screen
           name="TermsCondition"
           options={({navigation, route}) => ({
             headerTitle: 'Terms and Condition',
@@ -28,7 +28,7 @@ const Routes = () => {
             headerShown: true,
           })}
           component={TermsConditionScreen}
-        /> */}
+        />
       </AppStack.Navigator>
     </>
   );

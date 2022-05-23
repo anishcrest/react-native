@@ -25,6 +25,8 @@ import {USER_LOGIN, PROVIDER, FIREBASE_TOKEN} from '../../../../redux/Actions';
 import Images from '../../../../assets';
 import SocialButton from '../../../../components/common/SocialButton/SocialButton';
 import {AnimatedButton} from '../../../../components/common/AnimatedButton/AnimatedButton';
+// import { AppleButton } from '@invertase/react-native-apple-authentication';
+// import {LoginManager, AccessToken} from 'react-native-fbsdk-next';
 
 const SignInScreen = () => {
   const navigation = useNavigation();
@@ -225,6 +227,13 @@ const SignInScreen = () => {
           color="#de4d41"
           backgroundColor="#f5e7ea"
           onPress={() => onGoogleButtonPress()}
+        />
+        <SocialButton
+          buttonTitle="Sign In with Facebook"
+          btnType="facebook"
+          color="#de4d41"
+          backgroundColor="#f5e7ea"
+          onPress={() => {}}
         />
       </View>
     </SafeAreaView>

@@ -1,3 +1,2 @@
-
-export * from './Button';
-export * from './SocialButton';
+export * from './AnimatedButton/AnimatedButton';
+export * from './SocialButton/SocialButton';
