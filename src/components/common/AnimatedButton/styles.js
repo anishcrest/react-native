@@ -1,24 +1,21 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import { StyleSheet } from 'react-native';
 
-const {width} = Dimensions.get('window');
-
+// Return the styles for animated button component
 export default StyleSheet.create({
-  container: {
-    padding: 10,
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-    borderRadius: 10,
-    // width: width * 0.9,
-    flexDirection: 'row',
-    borderWidth: 10,
-    // alignContent: 'center',
-    justifyContent: 'center',
-  },
-  iconContainer: {
-    height: 70,
-    width: 70,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingRight: 10,
-  },
+    container: {
+        padding: 10,
+        paddingHorizontal: 10,
+        paddingVertical: 10,
+        borderRadius: 10,
+        flexDirection: 'row',
+        borderWidth: 10,
+        justifyContent: 'center',
+    },
+    iconContainer: {
+        height: 70,
+        width: 70,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingRight: 10,
+    },
 });

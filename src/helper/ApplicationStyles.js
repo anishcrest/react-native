@@ -5,13 +5,13 @@
  */
 
 export default {
-  screen: {
-    container: {
-      flex: 1,
+    screen: {
+        container: {
+            flex: 1,
+        },
+        center: {
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
     },
-    center: {
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-  },
 };

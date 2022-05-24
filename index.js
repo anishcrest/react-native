@@ -1,9 +1,9 @@
 /**
  * @format
  */
-import {AppRegistry, Text, TextInput, LogBox} from 'react-native';
+import { AppRegistry, Text, TextInput, LogBox } from 'react-native';
 import App from './src/App';
-import {name as appName} from './app.json';
+import { name as appName } from './app.json';
 
 //Disable textinput accessibility
 Text.defaultProps = {};
