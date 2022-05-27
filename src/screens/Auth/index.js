@@ -1,3 +1,3 @@
-export * from './SignInScreen';
-export * from './SignUpScreen';
-export * from './TermsConditionScreen';
+export * from './SignInScreen/SignInScreen';
+export * from './SignUpScreen/SignUpScreen';
+export * from './TermsConditionScreen/TermsConditionScreen';

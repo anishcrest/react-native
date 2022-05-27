@@ -4,12 +4,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import { HelpScreen, HomeScreen, OtherScreen } from '../screens/TabScreens';
+import { HelpScreen, HomeScreen, OtherScreen } from '../screens/tabs';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-import { getScreenOptions } from './common';
+import { getScreenOptions } from './common/common';
 
 const HomeStack = () => {
     return (

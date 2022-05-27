@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
 import { NetworkProvider } from 'react-native-offline';
 
-import { isMountedRef, navigationRef } from '../routes/RootNavigation';
-import { store } from '../redux/store';
+import { isMountedRef, navigationRef } from '../../routes/RootNavigation';
+import { store } from '../../redux/store';
 
 const Providers = props => {
     useEffect(() => {

@@ -4,8 +4,8 @@ import {
     TermsConditionScreen,
     SignInScreen,
     SignUpScreen,
-} from '../screens/Auth';
-import { RenderBack } from './common';
+} from '../screens/auth';
+import { RenderBack } from './common/common';
 
 const AuthStack = createStackNavigator();
 

@@ -1,1 +1,1 @@
-export * from './routes.navigator';
+export * from './Routes';
