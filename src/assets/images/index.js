@@ -1,6 +1,6 @@
 // Export the required icons
 export default {
-    iconUser: require('./general/icon_user.png'),
+    iconUser: require('./general/iconUser.png'),
     plus: require('./general/plus.png'),
     minus: require('./general/minus.png'),
     icon: require('./general/icon.png'),

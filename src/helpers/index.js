@@ -1,4 +1,5 @@
-import Color from './Color';
+import Colors from './Colors';
 import Dimensions from './Dimensions';
 import ApplicationStyles from './ApplicationStyles';
-export { Color, Dimensions, ApplicationStyles };
+
+export { Colors, Dimensions, ApplicationStyles };

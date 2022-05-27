@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Color, Dimensions, ApplicationStyles } from '../../../../helper';
+import { Colors, Dimensions, ApplicationStyles } from '../../../../helpers';
 
 export default StyleSheet.create({
     container: {
@@ -19,10 +19,10 @@ export default StyleSheet.create({
     titleStyle: {
         fontSize: Dimensions.FontSize.extraHuge,
         fontWeight: '600',
-        color: Color.Black,
+        color: Colors.Black,
     },
     buttonStyle: {
-        backgroundColor: Color.Red,
+        backgroundColor: Colors.Red,
         width: '95%',
         marginVertical: Dimensions.Spacing.tiny,
         borderRadius: 16,
@@ -37,14 +37,14 @@ export default StyleSheet.create({
         justifyContent: 'center',
     },
     textInputStyle: {
-        backgroundColor: Color.TheamCard,
+        backgroundColor: Colors.TheamCard,
         width: '95%',
         marginTop: 10,
         padding: 10,
         fontSize: 16,
         borderRadius: 15,
         alignSelf: 'center',
-        color: Color.White,
+        color: Colors.White,
     },
     imageStyle: {
         height: 50,
@@ -57,7 +57,7 @@ export default StyleSheet.create({
         width: '95%',
         borderRadius: 5,
         flexDirection: 'row',
-        backgroundColor: Color.GoogleBg,
+        backgroundColor: Colors.GoogleBg,
         borderRadius: 16,
     },
     iconContainer: {
@@ -69,12 +69,12 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
     signInText: {
-        color: Color.GoogleText,
+        color: Colors.GoogleText,
         fontSize: 16,
         fontWeight: '600',
     },
     createAccountText: {
-        color: Color.TheamBlack,
+        color: Colors.TheamBlack,
         fontSize: 16,
         fontWeight: '600',
         marginTop: 10,
@@ -82,7 +82,7 @@ export default StyleSheet.create({
     separator: {
         marginVertical: 50,
         borderWidth: 0.5,
-        borderColor: Color.GoogleText,
+        borderColor: Colors.GoogleText,
         width: '95%',
     },
     textStyle: {
@@ -92,12 +92,12 @@ export default StyleSheet.create({
     },
     buttonTextStyle: {
         fontSize: 20,
-        color: Color.White,
+        color: Colors.White,
         fontWeight: '700',
     },
     headrMainView: {
         elevation: 25,
-        backgroundColor: Color.TheamCard,
+        backgroundColor: Colors.TheamCard,
         width: '100%',
         height: '7%',
         paddingTop: 10,

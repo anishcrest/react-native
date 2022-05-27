@@ -1,3 +1,4 @@
+// Export common colors
 export default {
     Primary: '#485780',
     White: '#FFFFFF',

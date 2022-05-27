@@ -16,11 +16,11 @@ const SignUpScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const ref_input1 = useRef(null);
-    const ref_input2 = useRef(null);
-    const ref_input3 = useRef(null);
+    const refEmail = useRef(null);
+    const refPassword = useRef(null);
+    const refConfirmPassword = useRef(null);
 
-    function _isLogin() {
+    function processLogin() {
         let filterEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
         if (email === '') {
@@ -103,9 +103,9 @@ const SignUpScreen = () => {
                     autoCapitalize="none"
                     returnKeyType="next"
                     placeholderTextColor="#fff"
-                    ref={ref_input1}
+                    ref={refEmail}
                     keyboardType="email-address"
-                    onSubmitEditing={() => ref_input2.current.focus()}
+                    onSubmitEditing={() => refPassword.current.focus()}
                 />
                 <TextInput
                     style={styles.textInputStyle}
@@ -114,8 +114,8 @@ const SignUpScreen = () => {
                     placeholder="Enter your password"
                     secureTextEntry={true}
                     placeholderTextColor="#fff"
-                    ref={ref_input2}
-                    onSubmitEditing={() => ref_input3.current.focus()}
+                    ref={refPassword}
+                    onSubmitEditing={() => refConfirmPassword.current.focus()}
                 />
                 <TextInput
                     style={styles.textInputStyle}
@@ -124,7 +124,7 @@ const SignUpScreen = () => {
                     placeholder="Enter your confirm password"
                     secureTextEntry={true}
                     placeholderTextColor="#fff"
-                    ref={ref_input3}
+                    ref={refConfirmPassword}
                 />
             </View>
             <TouchableOpacity onPress={() => navigation.navigate('TermsCondition')}>
@@ -132,7 +132,7 @@ const SignUpScreen = () => {
             </TouchableOpacity>
             <Button
                 title="Sign Up"
-                onPress={() => _isLogin()}
+                onPress={() => processLogin()}
                 containerStyle={styles.buttonStyle}
                 textStyle={styles.buttonTextStyle}
             />

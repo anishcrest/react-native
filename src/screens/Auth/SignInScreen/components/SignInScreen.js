@@ -15,23 +15,19 @@ import {
     GoogleSignin,
 } from '@react-native-google-signin/google-signin';
 import { Button } from '../../../../components';
-import { Color } from '../../../../helper';
+import { Colors } from '../../../../helpers';
 import styles from '../styles';
-import { USER_LOGIN, PROVIDER, FIREBASE_TOKEN } from '../../../../redux/Actions';
+import { USER_LOGIN, PROVIDER, FIREBASE_TOKEN } from '../../../../redux/actions';
 import SocialButton from '../../../../components/common/SocialButton/SocialButton';
 
 const SignInScreen = () => {
     const navigation = useNavigation();
     const dispatch = useDispatch();
-    const loginData = useSelector(state => state.loginData);
-    const firbaseToken = useSelector(state => state.firbaseToken);
-    console.log('loginData___', loginData);
-    console.log('firbaseToken___', firbaseToken);
 
     const [email, setEmail] = useState('test123@gmail.com');
     const [password, setPassword] = useState('123456');
-    const ref_input2 = useRef(null);
-    const ref_input1 = useRef(null);
+    const refEmail = useRef(null);
+    const refPassword = useRef(null);
 
     useEffect(() => {
         GoogleSignin.configure({
@@ -41,7 +37,7 @@ const SignInScreen = () => {
         });
     }, []);
 
-    async function _isLogin() {
+    async function processLogin() {
         let filterEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
         if (email === '') {
@@ -70,7 +66,6 @@ const SignInScreen = () => {
             auth()
                 .signInWithEmailAndPassword(email, password)
                 .then(response => {
-                    console.log('User signed with signInWithEmailAndPassword!', response);
                     dispatch(USER_LOGIN(response.user));
                     dispatch(PROVIDER(response.user._user.providerId));
                     navigation.navigate('Tabs');
@@ -82,11 +77,7 @@ const SignInScreen = () => {
                     setEmail('');
                 })
                 .catch(error => {
-                    console.log(error, '___________error');
                     if (error.code === 'auth/user-not-found') {
-                        console.log(
-                            'There is no user record corresponding to this identifier. The user may have been deleted.',
-                        );
                         showMessage({
                             message:
                                 'There is no user record corresponding to this identifier. The user may have been deleted.',
@@ -94,7 +85,6 @@ const SignInScreen = () => {
                         });
                     }
                     if (error.code === 'auth/email-already-in-use') {
-                        console.log('That email address is already in use!');
                         showMessage({
                             message: 'That email address is already in use!',
                             type: 'danger',
@@ -145,7 +135,6 @@ const SignInScreen = () => {
             auth()
                 .signInWithCredential(googleCredential)
                 .then(response => {
-                    console.log('response___', response);
                     dispatch(USER_LOGIN(response.user));
                     navigation.navigate('Tabs');
                     showMessage({
@@ -154,14 +143,17 @@ const SignInScreen = () => {
                     });
                 });
         } catch (error) {
-            console.log('GoogleSignin___', error);
+            showMessage({
+                message: 'Google signin error',
+                type: 'danger',
+            });
         }
     }
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
-                <Icon name="home" size={50} color={Color.Red} />
+                <Icon name="home" size={50} color={Colors.Red} />
                 <Text style={styles.textStyle}>Redux</Text>
                 <View style={styles.seconView}>
                     <TextInput
@@ -172,9 +164,9 @@ const SignInScreen = () => {
                         autoCapitalize="none"
                         returnKeyType="next"
                         placeholderTextColor="#fff"
-                        ref={ref_input1}
+                        ref={refEmail}
                         keyboardType="email-address"
-                        onSubmitEditing={() => ref_input2.current.focus()}
+                        onSubmitEditing={() => refPassword.current.focus()}
                     />
                     <TextInput
                         style={styles.textInputStyle}
@@ -183,12 +175,12 @@ const SignInScreen = () => {
                         placeholder="Enter your password"
                         secureTextEntry={true}
                         placeholderTextColor="#fff"
-                        ref={ref_input2}
+                        ref={refPassword}
                     />
                 </View>
                 <Button
                     title="Sign In"
-                    onPress={() => _isLogin()}
+                    onPress={() => processLogin()}
                     containerStyle={styles.buttonStyle}
                     textStyle={styles.buttonTextStyle1}
                 />

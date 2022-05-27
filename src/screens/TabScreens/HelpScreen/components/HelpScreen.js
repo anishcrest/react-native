@@ -8,24 +8,19 @@ import {
 } from '@react-native-google-signin/google-signin';
 import { useDispatch, useSelector } from 'react-redux';
 import auth from '@react-native-firebase/auth';
-import { Color } from '../../../../helper';
+import { Colors } from '../../../../helpers';
 import styles from '../styles';
 import { Button } from '../../../../components';
-import { LOG_OUT } from '../../../../redux/Actions';
+import { LOG_OUT } from '../../../../redux/actions';
 
 const HelpScreen = () => {
     const navigation = useNavigation();
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = useState(false);
     const loginData = useSelector(state => state.loginData);
-    const firbaseToken = useSelector(state => state.firbaseToken);
     const provider = useSelector(state => state.provider);
 
-    useEffect(() => {
-        const currentUser = GoogleSignin.getCurrentUser();
-    }, []);
-
-    function _logout() {
+    function processLogout() {
         Alert.alert(
             '',
             'Are you sure you want to Logout?',
@@ -37,17 +32,16 @@ const HelpScreen = () => {
                 },
                 {
                     text: 'Yes',
-                    onPress: async () => _yesPress(),
+                    onPress: async () => yesPressed(),
                 },
             ],
             { cancelable: false },
         );
     }
 
-    async function _yesPress() {
+    async function yesPressed() {
         if (loginData !== null) {
             if (provider === 'google.com') {
-                console.log('innnnn google');
                 GoogleSignin.signOut();
                 dispatch(LOG_OUT());
                 setIsLoading(false);
@@ -59,8 +53,7 @@ const HelpScreen = () => {
                     setIsLoading(true);
                     auth()
                         .signOut()
-                        .then(response => {
-                            console.log('User signed out!', response);
+                        .then(() => {
                             dispatch(LOG_OUT());
                             setIsLoading(false);
                             AsyncStorage.clear();
@@ -68,7 +61,6 @@ const HelpScreen = () => {
                             setIsLoading(false);
                         });
                 } catch (err) {
-                    console.log('___err', err);
                     setIsLoading(false);
                 }
             }
@@ -78,7 +70,7 @@ const HelpScreen = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.textStyle}>Help Screen</Text>
-            <Icon name="home" size={50} color={Color.Red} />
+            <Icon name="home" size={50} color={Colors.Red} />
             <Text style={styles.textStyle}>Redux</Text>
             {isLoading ? (
                 <ActivityIndicator
@@ -90,7 +82,7 @@ const HelpScreen = () => {
             ) : (
                 <Button
                     title="SIGN OUT"
-                    onPress={() => _logout()}
+                    onPress={() => processLogout()}
                     textStyle={styles.buttonTextStyle}
                     containerStyle={styles.buttonStyle}
                 />

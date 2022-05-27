@@ -1,6 +1,3 @@
-/**
- * @format
- */
 import { RenderBack } from './common';
 
 import { AuthRoutes } from './AuthRoutes';
@@ -21,7 +18,7 @@ const Routes = () => {
                 <AppStack.Screen name="Tabs" component={Tabs} />
                 <AppStack.Screen
                     name="TermsCondition"
-                    options={({ navigation, route }) => ({
+                    options={({ navigation }) => ({
                         headerTitle: 'Terms and Condition',
                         headerLeft: () => <RenderBack navigation={navigation} />,
                         headerShown: true,

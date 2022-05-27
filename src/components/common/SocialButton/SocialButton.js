@@ -12,7 +12,8 @@ const SocialButton = ({
     ...rest
 }) => {
     let bgColor = backgroundColor;
-    
+
+    // Return component JSX
     return (
         <TouchableOpacity
             style={[styles.buttonContainer, { backgroundColor: bgColor }]}

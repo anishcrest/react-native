@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 
+// Return social button styles
 export default StyleSheet.create({
     buttonContainer: {
         marginTop: 10,

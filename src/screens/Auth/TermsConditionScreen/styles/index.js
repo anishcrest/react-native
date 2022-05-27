@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { ApplicationStyles } from '../../../../helper';
+import { ApplicationStyles } from '../../../../helpers';
 
 export default StyleSheet.create({
     container: {

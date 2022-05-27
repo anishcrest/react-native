@@ -22,7 +22,7 @@ const AuthRoutes = props => {
             <AuthStack.Screen
                 name="Register"
                 component={SignUpScreen}
-                options={({ navigation, route }) => ({
+                options={({ navigation }) => ({
                     headerLeft: () => <RenderBack navigation={navigation} />,
                     headerTitle: 'Registration',
                     headerShown: true,
@@ -36,7 +36,7 @@ const AuthRoutes = props => {
             <AuthStack.Screen
                 name="TermsCondition"
                 component={TermsConditionScreen}
-                options={({ navigation, route }) => ({
+                options={({ navigation }) => ({
                     headerLeft: () => <RenderBack navigation={navigation} />,
                     headerTitle: 'Terms and Condition',
                     headerShown: true,

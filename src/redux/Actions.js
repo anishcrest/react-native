@@ -21,6 +21,7 @@ export function DRIVER_ACTIVE_ORDER(res) {
 export function FIREBASE_TOKEN(res) {
     return { type: 'FIREBASE_TOKEN', res };
 }
+
 export function PROVIDER(res) {
     return { type: 'PROVIDER', res };
 }

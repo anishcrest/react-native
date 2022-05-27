@@ -1,5 +1,5 @@
 import FlashMessage from 'react-native-flash-message';
-import { Providers } from './Providers';
+import { Providers } from './providers/Providers';
 import React from 'react';
 import { Routes } from './routes';
 import { PersistGate } from 'redux-persist/integration/react';

@@ -59,6 +59,8 @@ const AnimatedButton = props => {
         animationConfig = { startSize: 1, endSize: 0.95 },
     } = props;
     const scaleInAnimated = new Animated.Value(0);
+
+    // Handle click events
     const handlePress = useCallback(() => onTapped && onTapped(), [onTapped]);
     const debouncedClick = debounce(() => handlePress(), INTERVAL, {
         leading: true,
@@ -72,6 +74,7 @@ const AnimatedButton = props => {
     const onPressOut = () =>
         animate && scaleAnimation.pressOutAnimation(scaleInAnimated);
 
+    // Return component JSX
     return (
         <AnimatedTouchable
             activeOpacity={0.95}

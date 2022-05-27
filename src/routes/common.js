@@ -1,6 +1,3 @@
-/**
- * @format
- */
 import React from 'react';
 import BackButton from '../components/general/BackButton/BackButton';
 
