@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { Colors, Dimensions, ApplicationStyles } from '../../../helpers';
 
+// Return sign in screen styles
 export default StyleSheet.create({
     container: {
         ...ApplicationStyles.screen.container,

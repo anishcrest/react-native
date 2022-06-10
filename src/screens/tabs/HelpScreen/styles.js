@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 import { ApplicationStyles } from '../../../helpers';
 
+// Return help screen styles
 export default StyleSheet.create({
     container: {
         ...ApplicationStyles.screen.container,

@@ -5,6 +5,7 @@ import { Colors } from '../../../helpers';
 import styles from './styles';
 
 const TermsConditionScreen = () => {
+    // Return terms and conditions page JSX
     return (
         <View style={styles.container}>
             <Text style={styles.textStyle}>Terms Condition</Text>

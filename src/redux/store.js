@@ -12,5 +12,7 @@ const persistConfig = {
     stateReconciler: autoMergeLevel2,
 };
 const persistedReducer = persistReducer(persistConfig, reducer);
+
+// Create and export common store
 export const store = createStore(persistedReducer, {}, applyMiddleware(logger));
 export const persistor = persistStore(store);

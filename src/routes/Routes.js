@@ -9,6 +9,7 @@ import { TermsConditionScreen } from '../screens/auth';
 
 const AppStack = createStackNavigator();
 
+// Define the routes
 const Routes = () => {
     return (
         <>

@@ -11,6 +11,8 @@ const Stack = createStackNavigator();
 
 import { getScreenOptions } from './common/common';
 
+/* Return the stacks for different tabs of the app */
+
 const HomeStack = () => {
     return (
         <Stack.Navigator screenOptions={{ ...getScreenOptions() }}>

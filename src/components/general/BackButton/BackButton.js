@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const BackButton = props => {
     const { onPress } = props;
-    
+
     // Return component JSX
     return (
         <TouchableOpacity onPress={onPress} styles={styles.touchStyle}>

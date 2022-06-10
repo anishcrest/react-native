@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { ApplicationStyles } from '../../../helpers';
 
+// Return styles for terms and conditions page
 export default StyleSheet.create({
     container: {
         ...ApplicationStyles.screen.container,

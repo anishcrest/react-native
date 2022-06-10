@@ -1,6 +1,7 @@
 import { Platform, Dimensions } from 'react-native';
 import { moderateScale, scale, verticalScale } from 'react-native-size-matters';
 
+// Export common Dimensions settings
 export default {
     moderateScale,
     scale,

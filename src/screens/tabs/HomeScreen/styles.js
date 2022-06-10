@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { ApplicationStyles } from '../../../helpers';
 
+// Return home screen styles
 export default StyleSheet.create({
     container: {
         ...ApplicationStyles.screen.container,

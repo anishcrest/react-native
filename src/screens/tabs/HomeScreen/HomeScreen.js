@@ -5,6 +5,7 @@ import { Colors } from '../../../helpers';
 import styles from './styles';
 
 const HomeScreen = () => {
+    // Return home screen JSX
     return (
         <View style={styles.container}>
             <Text style={styles.textStyle}>Home Screen</Text>

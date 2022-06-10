@@ -1,12 +1,15 @@
 class Api {
+    /* Return functions for basic API calls */
+
     static headers(token) {
         return {
-            Accept: 'application/json',
+            'Accept': 'application/json',
             'Content-Type': 'application/json',
-            Authorization: 'Bearer' + ' ' + token,
-            dataType: 'json',
+            'Authorization': 'Bearer' + ' ' + token,
+            'dataType': 'json',
         };
     }
+
     static get(route, token) {
         return this.appetizar(route, null, token, 'GET');
     }

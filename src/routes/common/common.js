@@ -1,6 +1,7 @@
 import React from 'react';
 import BackButton from '../../components/general/BackButton/BackButton';
 
+// Function to return dynamic header title
 const getHeaderTitle = route => {
     const routeName = route.name ?? '';
     if (routeName !== '') {
@@ -10,6 +11,7 @@ const getHeaderTitle = route => {
     return '';
 };
 
+// Function to get screen options
 const getScreenOptions = () => {
     const options = {
         headerTintColor: 'red',
@@ -28,6 +30,7 @@ const getScreenOptions = () => {
     return options;
 };
 
+// Function to render the custom back button
 const RenderBack = props => {
     const { navigation } = props;
     const onBackPress = () => navigation.goBack();

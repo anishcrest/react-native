@@ -5,7 +5,7 @@ import { Colors } from '../../../helpers';
 import styles from './styles';
 
 const OtherScreen = () => {
-
+    // Return other screen JSX
     return (
         <View style={styles.container}>
             <Text style={styles.textStyle}>Other Screen</Text>

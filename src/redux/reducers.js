@@ -1,5 +1,6 @@
 import { REHYDRATE } from 'redux-persist';
 
+// Initial state
 let initState = {
     loginData: {},
     userToken: null,
@@ -8,6 +9,7 @@ let initState = {
     firbaseToken: null,
 };
 
+// Conditions for changing global redux state based on conditions
 function ApptizerReducers(state = initState, action) {
     switch (action.type) {
         case 'USER_LOGIN':

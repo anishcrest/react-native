@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, Alert, ActivityIndicator, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -20,6 +20,7 @@ const HelpScreen = () => {
     const loginData = useSelector(state => state.loginData);
     const provider = useSelector(state => state.provider);
 
+    // Function to process logout button click
     function processLogout() {
         Alert.alert(
             '',
@@ -39,6 +40,7 @@ const HelpScreen = () => {
         );
     }
 
+    // Function to be called when yes is pressed
     async function yesPressed() {
         if (loginData !== null) {
             if (provider === 'google.com') {
@@ -67,6 +69,7 @@ const HelpScreen = () => {
         }
     }
 
+    // Return Help screen JSX
     return (
         <View style={styles.container}>
             <Text style={styles.textStyle}>Help Screen</Text>

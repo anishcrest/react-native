@@ -37,6 +37,7 @@ const SignInScreen = () => {
         });
     }, []);
 
+    // Function to process the login button click
     async function processLogin() {
         let filterEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -122,6 +123,7 @@ const SignInScreen = () => {
         }
     }
 
+    // Function to handle the google signin
     async function onGoogleButtonPress() {
         // Get the users ID token
         const { idToken } = await GoogleSignin.signIn();
@@ -150,6 +152,7 @@ const SignInScreen = () => {
         }
     }
 
+    // Return signin screen JSX
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>

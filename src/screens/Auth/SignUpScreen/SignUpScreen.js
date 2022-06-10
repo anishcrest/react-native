@@ -20,6 +20,7 @@ const SignUpScreen = () => {
     const refPassword = useRef(null);
     const refConfirmPassword = useRef(null);
 
+    // Function to process the login
     function processLogin() {
         let filterEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -91,6 +92,7 @@ const SignUpScreen = () => {
         }
     }
 
+    // Return sign up screen JSX
     return (
         <View style={styles.container}>
             <Text style={styles.titleStyle}>Create Account</Text>

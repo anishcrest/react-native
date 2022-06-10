@@ -1,3 +1,4 @@
+// Export the common components
 import Title from './general/Title/Title';
 import SubTitle from './general/SubTitle/SubTitle';
 import Button from './general/Button/Button';

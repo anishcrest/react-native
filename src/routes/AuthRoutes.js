@@ -9,6 +9,7 @@ import { RenderBack } from './common/common';
 
 const AuthStack = createStackNavigator();
 
+// Define the auth routes
 const AuthRoutes = props => {
     const { screenOptions } = props;
     return (

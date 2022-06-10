@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { Colors } from '../../../helpers';
 import styles from './styles';
 
-const SplashScreen = props => {
+const SplashScreen = () => {
     const navigation = useNavigation();
     const loginData = useSelector(state => state.loginData);
 
@@ -14,6 +14,7 @@ const SplashScreen = props => {
         timeOut();
     });
 
+    // Function to add timeout before performing the actions
     function timeOut() {
         setTimeout(() => {
             var isMyObjectEmpty = 0;
@@ -28,6 +29,7 @@ const SplashScreen = props => {
         }, 1500);
     }
 
+    // Return splash screen JSX
     return (
         <View style={styles.container}>
             <Text style={styles.textStyle}>Splash Screen</Text>
